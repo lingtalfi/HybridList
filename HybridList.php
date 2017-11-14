@@ -163,7 +163,6 @@ class HybridList implements HybridListInterface
     }
 
 
-
     public function addListShaper(ListShaperInterface $listShaper)
     {
         $this->listShapers[] = $listShaper;
@@ -175,6 +174,15 @@ class HybridList implements HybridListInterface
         $this->listParameters = $listParameters;
         return $this;
     }
+
+    /**
+     * @return array
+     */
+    public function getListParameters()
+    {
+        return $this->listParameters;
+    }
+
 
     //--------------------------------------------
     //

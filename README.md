@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.4.0 -- 2017-11-14
+
+    - add HybridListInterface.getListParameters method
+    
 - 1.3.0 -- 2017-11-14
 
     - promote most HybridList public methods to HybridListInterface

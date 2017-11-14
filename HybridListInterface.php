@@ -38,4 +38,6 @@ interface HybridListInterface
      */
     public function setListParameters(array $listParameters);
 
+    public function getListParameters();
+
 }
