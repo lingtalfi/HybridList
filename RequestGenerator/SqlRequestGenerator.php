@@ -17,6 +17,7 @@ class SqlRequestGenerator extends RequestGenerator
 
     public function __construct()
     {
+        parent::__construct();
         $this->sqlRequest = null;
         $this->infoArray = [];
     }
@@ -40,7 +41,7 @@ class SqlRequestGenerator extends RequestGenerator
         $markers = $this->sqlRequest->getMarkers();
 
 
-        $row = QuickPdo::fetch($countRequest);
+        $row = QuickPdo::fetch($countRequest, $markers);
         $rows = QuickPdo::fetchAll($sqlRequest, $markers);
         $nbItems = $row['count'];
 
