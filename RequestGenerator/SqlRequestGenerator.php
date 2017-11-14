@@ -14,11 +14,13 @@ class SqlRequestGenerator extends RequestGenerator
      */
     private $sqlRequest;
     private $infoArray;
+    private $pdoFetchStyle;
 
     public function __construct()
     {
         parent::__construct();
         $this->sqlRequest = null;
+        $this->pdoFetchStyle = null;
         $this->infoArray = [];
     }
 
@@ -27,6 +29,13 @@ class SqlRequestGenerator extends RequestGenerator
         $this->sqlRequest = $sqlRequest;
         return $this;
     }
+
+    public function setPdoFetchStyle($pdoFetchStyle)
+    {
+        $this->pdoFetchStyle = $pdoFetchStyle;
+        return $this;
+    }
+
 
     public function getSqlRequest()
     {
@@ -42,7 +51,7 @@ class SqlRequestGenerator extends RequestGenerator
 
 
         $row = QuickPdo::fetch($countRequest, $markers);
-        $rows = QuickPdo::fetchAll($sqlRequest, $markers);
+        $rows = QuickPdo::fetchAll($sqlRequest, $markers, $this->pdoFetchStyle);
         $nbItems = $row['count'];
 
 

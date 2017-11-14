@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.1.0 -- 2017-11-14
+
+    - add SqlRequestGenerator.setPdoFetchStyle method
+    
 - 1.0.1 -- 2017-11-14
 
     - fix SqlRequestGenerator not extending parent
