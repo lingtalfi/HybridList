@@ -103,6 +103,7 @@ class HybridList implements HybridListInterface
         // TREAT THE PHP PART
         //--------------------------------------------
         if ($items) {
+            $items = $this->preparePhpItems($items);
             if ($this->listShapers) {
                 //--------------------------------------------
                 // BUILD THE ARRAY OF PARAMETERS => SHAPERS TO EXECUTE
@@ -163,6 +164,13 @@ class HybridList implements HybridListInterface
     {
         $this->listParameters = $listParameters;
         return $this;
+    }
+    //--------------------------------------------
+    //
+    //--------------------------------------------
+    protected function preparePhpItems(array $items)
+    {
+        return $items;
     }
 
 
