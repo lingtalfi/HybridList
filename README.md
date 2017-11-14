@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.3.0 -- 2017-11-14
+
+    - promote most HybridList public methods to HybridListInterface
+    
 - 1.2.0 -- 2017-11-14
 
     - add HybridList.preparePhpItems protected method

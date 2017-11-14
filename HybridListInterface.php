@@ -4,6 +4,9 @@
 namespace HybridList;
 
 
+use HybridList\ListShaper\ListShaperInterface;
+use HybridList\RequestGenerator\RequestGeneratorInterface;
+
 interface HybridListInterface
 {
 
@@ -17,4 +20,22 @@ interface HybridListInterface
      *
      */
     public function execute();
+
+
+    public function setRequestGenerator(RequestGeneratorInterface $requestGenerator);
+
+    /**
+     * @return RequestGeneratorInterface
+     */
+    public function getRequestGenerator();
+
+
+    public function addListShaper(ListShaperInterface $listShaper);
+
+    /**
+     * The entry point of the hybrid list, this is where you inject your $_GET/$_POST/testArray
+     * parameters...
+     */
+    public function setListParameters(array $listParameters);
+
 }

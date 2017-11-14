@@ -154,6 +154,16 @@ class HybridList implements HybridListInterface
         return $this;
     }
 
+    /**
+     * @return RequestGeneratorInterface
+     */
+    public function getRequestGenerator()
+    {
+        return $this->requestGenerator;
+    }
+
+
+
     public function addListShaper(ListShaperInterface $listShaper)
     {
         $this->listShapers[] = $listShaper;
@@ -165,6 +175,7 @@ class HybridList implements HybridListInterface
         $this->listParameters = $listParameters;
         return $this;
     }
+
     //--------------------------------------------
     //
     //--------------------------------------------
