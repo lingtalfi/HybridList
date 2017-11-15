@@ -128,8 +128,10 @@ class HybridList implements HybridListInterface
                 // WILDCARD SHAPER
                 //--------------------------------------------
                 if (array_key_exists("*", $params2Shapers)) {
-                    $shaper = $params2Shapers["*"];
-                    $shaper->execute("*", $items, $listInfo, $originalItems);
+                    foreach ($params2Shapers["*"] as $shaper) {
+                        $shaper = $params2Shapers["*"];
+                        $shaper->execute("*", $items, $listInfo, $originalItems);
+                    }
                 }
             }
 
@@ -211,7 +213,11 @@ class HybridList implements HybridListInterface
              */
             $params = $shaper->getReactsTo();
             foreach ($params as $param) {
-                $params2Shapers[$param] = $shaper;
+                if ('*' === $param) {
+                    $params2Shapers[$param][] = $shaper;
+                } else {
+                    $params2Shapers[$param] = $shaper;
+                }
             }
         }
         return $params2Shapers;

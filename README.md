@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.6.2 -- 2017-11-15
+
+    - update HybridList, now multiple ListShapers can be bound to the wildcard
+    
 - 1.6.1 -- 2017-11-15
 
     - fix HybridList wildcard implementation
