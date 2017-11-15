@@ -129,7 +129,6 @@ class HybridList implements HybridListInterface
                 //--------------------------------------------
                 if (array_key_exists("*", $params2Shapers)) {
                     foreach ($params2Shapers["*"] as $shaper) {
-                        $shaper = $params2Shapers["*"];
                         $shaper->execute("*", $items, $listInfo, $originalItems);
                     }
                 }
