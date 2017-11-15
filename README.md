@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.6.1 -- 2017-11-15
+
+    - fix HybridList wildcard implementation
+    
 - 1.6.0 -- 2017-11-15
 
     - improve HybridList, now recognizes the wildcard "*" for ListShapers (dynamic shapers). Useful for pagination

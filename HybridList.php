@@ -115,15 +115,21 @@ class HybridList implements HybridListInterface
                 // NOW EXECUTE THE RELEVANT SHAPERS
                 //--------------------------------------------
                 foreach ($this->listParameters as $key => $value) {
-                    if (array_key_exists($key, $params2Shapers) || '*' === $key) {
+                    if (array_key_exists($key, $params2Shapers)) {
                         /**
                          * @var $shaper ListShaperInterface
                          */
                         $shaper = $params2Shapers[$key];
-                        $info = [];
-                        $shaper->execute($value, $items, $info, $originalItems);
-                        self::mergeInfo($info, $listInfo);
+                        $this->processShaper($shaper, $value, $items, $info, $originalItems, $listInfo);
                     }
+                }
+
+                //--------------------------------------------
+                // WILDCARD SHAPER
+                //--------------------------------------------
+                if (array_key_exists("*", $params2Shapers)) {
+                    $shaper = $params2Shapers["*"];
+                    $this->processShaper($shaper, '*', $items, $info, $originalItems, $listInfo);
                 }
             }
 
@@ -143,6 +149,7 @@ class HybridList implements HybridListInterface
 
 
     }
+
 
     //--------------------------------------------
     //
@@ -220,5 +227,12 @@ class HybridList implements HybridListInterface
                 }
             }
         }
+    }
+
+    private function processShaper(ListShaperInterface $shaper, $value, array &$items, array &$info = [], array $originalItems, array &$listInfo)
+    {
+        $info = [];
+        $shaper->execute($value, $items, $info, $originalItems);
+        self::mergeInfo($info, $listInfo);
     }
 }
