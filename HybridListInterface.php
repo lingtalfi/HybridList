@@ -12,11 +12,13 @@ interface HybridListInterface
 
     /**
      * @return array
-     *          - items: the rows
-     *          - sliceNumber: the number of the slice representing the items (aka the current page number)
-     *          - sliceLength: the number of items per slice
-     *          - totalNumberOfItems: the total number of items
-     *          - offset: the offset of the returned slice's first element (compared to the whole items array)
+     *          - items: array, the rows
+     *          - sliceNumber: int|null, the number of the slice representing the items (aka the current page number),
+     *                          or null if not used
+     *          - sliceLength: int|null, the number of items per slice, or null if not used
+     *          - totalNumberOfItems: int, the total number of items
+     *          - offset: int|null, the offset of the returned slice's first element (compared to the whole items array),
+     *                          or null if not used
      *
      */
     public function execute();
