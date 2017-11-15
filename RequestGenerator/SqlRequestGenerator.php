@@ -53,8 +53,7 @@ class SqlRequestGenerator extends RequestGenerator
         $row = QuickPdo::fetch($countRequest, $markers);
         $rows = QuickPdo::fetchAll($sqlRequest, $markers, $this->pdoFetchStyle);
         $nbItems = $row['count'];
-        a($countRequest);
-a("kk");
+
 
         $this->infoArray["totalNumberOfItems"] = $nbItems;
 
