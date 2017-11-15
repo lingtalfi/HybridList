@@ -104,6 +104,7 @@ class HybridList implements HybridListInterface
         //--------------------------------------------
         if ($items) {
             $items = $this->preparePhpItems($items);
+            $originalItems = $items;
             if ($this->listShapers) {
                 //--------------------------------------------
                 // BUILD THE ARRAY OF PARAMETERS => SHAPERS TO EXECUTE
@@ -121,7 +122,7 @@ class HybridList implements HybridListInterface
                          */
                         $shaper = $params2Shapers[$key];
                         $info = [];
-                        $shaper->execute($value, $items, $info);
+                        $shaper->execute($value, $items, $info, $originalItems);
                         self::mergeInfo($info, $listInfo);
 
                     }

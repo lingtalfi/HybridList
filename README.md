@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.5.0 -- 2017-11-15
+
+    - add ListShaperInterface.execute method's originalItems argument
+    
 - 1.4.0 -- 2017-11-14
 
     - add HybridListInterface.getListParameters method

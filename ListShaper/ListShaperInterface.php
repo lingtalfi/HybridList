@@ -18,11 +18,12 @@ interface ListShaperInterface extends ShaperInterface
      *              - sliceLength
      *              - totalNumberOfItems
      *              - offset
+     * @param array $originalItems , an array containing the original items (before any ListShaper has applied)
      *
      *
      * @return void
      */
-    public function execute($input, array &$rows, array &$info = []);
+    public function execute($input, array &$rows, array &$info = [], array $originalItems = []);
 
 
 }
