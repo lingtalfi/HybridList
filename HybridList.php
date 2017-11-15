@@ -81,8 +81,6 @@ class HybridList implements HybridListInterface
                     $shaper->execute($value, $sqlRequest);
                 }
             }
-
-
         }
 
         //--------------------------------------------
@@ -90,11 +88,13 @@ class HybridList implements HybridListInterface
         //--------------------------------------------
         $items = $this->requestGenerator->getItems();
 
+
         //--------------------------------------------
         // COLLECT ALL THE INFO THAT WE CAN FROM THE SQL
         //--------------------------------------------
         if ($this->requestGenerator instanceof SqlRequestGenerator) {
             $info = $this->requestGenerator->getAfterItemsInfo();
+            az($info);
             self::mergeInfo($info, $listInfo);
         }
 
@@ -124,7 +124,6 @@ class HybridList implements HybridListInterface
                         $info = [];
                         $shaper->execute($value, $items, $info, $originalItems);
                         self::mergeInfo($info, $listInfo);
-
                     }
                 }
             }
