@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.6.0 -- 2017-11-15
+
+    - improve HybridList, now recognizes the wildcard "*" for ListShapers (dynamic shapers). Useful for pagination
+    
 - 1.5.2 -- 2017-11-15
 
     - fix HybridList now return nulls when not set for sliceNumber, sliceLength, offset

@@ -115,7 +115,7 @@ class HybridList implements HybridListInterface
                 // NOW EXECUTE THE RELEVANT SHAPERS
                 //--------------------------------------------
                 foreach ($this->listParameters as $key => $value) {
-                    if (array_key_exists($key, $params2Shapers)) {
+                    if (array_key_exists($key, $params2Shapers) || '*' === $key) {
                         /**
                          * @var $shaper ListShaperInterface
                          */
