@@ -68,6 +68,10 @@ class SqlRequestGenerator extends RequestGenerator
              * sliceLength
              */
             $this->infoArray['sliceNumber'] = ($offset / $nipp) + 1;
+        } else {
+            $this->infoArray['sliceLength'] = null;
+            $this->infoArray['offset'] = null;
+            $this->infoArray['sliceNumber'] = null;
         }
 
         return $rows;

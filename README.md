@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.5.2 -- 2017-11-15
+
+    - fix HybridList now return nulls when not set for sliceNumber, sliceLength, offset
+    
 - 1.5.1 -- 2017-11-15
 
     - fix SqlRequest now the count query takes into account the distinct keyword

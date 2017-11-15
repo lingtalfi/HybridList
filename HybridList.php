@@ -55,10 +55,10 @@ class HybridList implements HybridListInterface
     {
         $listInfo = [
             'items' => [],
-            'sliceNumber' => 0,
-            'sliceLength' => 0,
+            'sliceNumber' => null,
+            'sliceLength' => null,
             'totalNumberOfItems' => 0,
-            'offset' => 0,
+            'offset' => null,
         ];
 
 
@@ -94,7 +94,6 @@ class HybridList implements HybridListInterface
         //--------------------------------------------
         if ($this->requestGenerator instanceof SqlRequestGenerator) {
             $info = $this->requestGenerator->getAfterItemsInfo();
-            az($info);
             self::mergeInfo($info, $listInfo);
         }
 
