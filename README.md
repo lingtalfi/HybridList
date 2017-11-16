@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.7.1 -- 2017-11-16
+
+    - fix HybridList listInfo overriding shapers return
+    
 - 1.7.0 -- 2017-11-16
 
     - add ListShaperInterface.prepareWithOriginalItems method

@@ -150,13 +150,7 @@ class HybridList implements HybridListInterface
             //--------------------------------------------
             //
             //--------------------------------------------
-            $listInfo = [
-                'items' => $items,
-                'sliceNumber' => $listInfo['sliceNumber'],
-                'sliceLength' => $listInfo['sliceLength'],
-                'totalNumberOfItems' => $listInfo['totalNumberOfItems'],
-                'offset' => $listInfo['offset'],
-            ];
+            $listInfo['items'] = $items;
         }
         return $listInfo;
 
