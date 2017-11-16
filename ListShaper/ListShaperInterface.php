@@ -25,5 +25,15 @@ interface ListShaperInterface extends ShaperInterface
      */
     public function execute($input, array &$rows, array &$info = [], array $originalItems = []);
 
+    /**
+     * This method is called before the original items are filtered by list shapers.
+     * It provides the list shaper the opportunity to collect information about the current list.
+     *
+     *
+     * @param array $originalItems
+     * @return void
+     */
+    public function prepareWithOriginalItems(array $originalItems);
+
 
 }

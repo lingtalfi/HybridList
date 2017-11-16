@@ -105,6 +105,18 @@ class HybridList implements HybridListInterface
             $items = $this->preparePhpItems($items);
             $originalItems = $items;
             if ($this->listShapers) {
+
+                //--------------------------------------------
+                // PROVIDE OPPORTUNITY FOR LIST SHAPERS TO PREPARE WITH ORIGINAL ITEMS
+                //--------------------------------------------
+                foreach($this->listShapers as $listShaper){
+                    /**
+                     * @var $listShaper ListShaperInterface
+                     */
+                    $listShaper->prepareWithOriginalItems($originalItems);
+                }
+
+
                 //--------------------------------------------
                 // BUILD THE ARRAY OF PARAMETERS => SHAPERS TO EXECUTE
                 //--------------------------------------------
