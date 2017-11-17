@@ -9,6 +9,7 @@ use HybridList\Shaper\Shaper;
 class ListShaper extends Shaper implements ListShaperInterface
 {
     private $prepareCallback;
+    private $priority;
 
 
     public function execute($input, array &$rows, array &$info = [], array $originalItems = [])
@@ -25,6 +26,12 @@ class ListShaper extends Shaper implements ListShaperInterface
         }
     }
 
+    public function getPriority()
+    {
+        return $this->priority;
+    }
+
+
 
     //--------------------------------------------
     //
@@ -32,6 +39,13 @@ class ListShaper extends Shaper implements ListShaperInterface
     public function setPrepareCallback(callable $cb)
     {
         $this->prepareCallback = $cb;
+        return $this;
+    }
+
+
+    public function setPriority($priority)
+    {
+        $this->priority = $priority;
         return $this;
     }
 

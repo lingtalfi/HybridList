@@ -35,5 +35,13 @@ interface ListShaperInterface extends ShaperInterface
      */
     public function prepareWithOriginalItems(array $originalItems);
 
+    /**
+     * Defines the priority in which shaper execute.
+     *
+     * @return null|int, the lowest number has the highest priority.
+     *          null means auto.
+     */
+    public function getPriority();
+
 
 }
