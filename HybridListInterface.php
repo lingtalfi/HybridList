@@ -4,6 +4,8 @@
 namespace HybridList;
 
 
+use HybridList\Exception\HybridListException;
+use HybridList\HybridListControl\HybridListControlInterface;
 use HybridList\ListShaper\ListShaperInterface;
 use HybridList\RequestGenerator\RequestGeneratorInterface;
 
@@ -25,6 +27,13 @@ interface HybridListInterface
 
 
     public function setRequestGenerator(RequestGeneratorInterface $requestGenerator);
+
+    /**
+     * @return HybridListControlInterface|mixed
+     * @throws HybridListException
+     */
+    public function getControl($name, $throwEx = true, $default = null);
+
 
     /**
      * @return RequestGeneratorInterface

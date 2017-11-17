@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.9.0 -- 2017-11-17
+
+    - add HybridListControlInterface and control system 
+    
 - 1.8.0 -- 2017-11-17
 
     - add ListShaperInterface.getPriority method

@@ -4,6 +4,8 @@
 namespace HybridList;
 
 
+use HybridList\Exception\HybridListException;
+use HybridList\HybridListControl\HybridListControlInterface;
 use HybridList\ListShaper\ListShaperInterface;
 use HybridList\RequestGenerator\RequestGeneratorInterface;
 use HybridList\RequestGenerator\SqlRequestGenerator;
@@ -31,6 +33,11 @@ class HybridList implements HybridListInterface
     private $sortKey;
     private $listParameters;
     private $listShapers;
+
+    /**
+     * @var HybridListControlInterface[]
+     */
+    private $controls;
     private static $allowedListInfoOverride = [
         'sliceNumber',
         'sliceLength',
@@ -43,7 +50,8 @@ class HybridList implements HybridListInterface
         $this->requestGenerator = null;
         $this->sortKey = "sort";
         $this->listParameters = [];
-        $this->listShapers = [];
+        $this->listParameters = [];
+        $this->controls = [];
     }
 
     public static function create()
@@ -206,9 +214,24 @@ class HybridList implements HybridListInterface
         return $this->listParameters;
     }
 
+    public function addControl($name, HybridListControlInterface $control)
+    {
+        $this->controls[$name] = $control;
+        return $this;
+    }
+
+    public function getControl($name, $throwEx = true, $default = null)
+    {
+        if (array_key_exists($name, $this->controls)) {
+            return $this->controls[$name];
+        }
+        if (true === $throwEx) {
+            throw new HybridListException("Control not found with name $name");
+        }
+        return $default;
+    }
+
     //--------------------------------------------
-
-
     //
     //--------------------------------------------
     protected function preparePhpItems(array $items)
