@@ -37,6 +37,8 @@ interface HybridListInterface
      */
     public function getControl($name, $throwEx = true, $default = null);
 
+    public function removeControl($name);
+
 
     /**
      * @return RequestGeneratorInterface

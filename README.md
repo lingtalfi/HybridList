@@ -214,6 +214,10 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.11.0 -- 2017-11-17
+
+    - add HybridListInterface.removeControl method 
+    
 - 1.10.0 -- 2017-11-17
 
     - add HybridListInterface.addControl method 

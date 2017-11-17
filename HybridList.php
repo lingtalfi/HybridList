@@ -11,7 +11,6 @@ use HybridList\RequestGenerator\RequestGeneratorInterface;
 use HybridList\RequestGenerator\SqlRequestGenerator;
 use HybridList\RequestShaper\RequestShaperInterface;
 use HybridList\Shaper\ShaperInterface;
-use Kamille\Services\XLog;
 
 
 /**
@@ -229,6 +228,12 @@ class HybridList implements HybridListInterface
             throw new HybridListException("Control not found with name $name");
         }
         return $default;
+    }
+
+    public function removeControl($name)
+    {
+        unset($this->controls[$name]);
+        return $this;
     }
 
     //--------------------------------------------
