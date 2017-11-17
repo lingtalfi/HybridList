@@ -214,6 +214,11 @@ In the **doc/hybrid-list-prototype.md** document.
 History Log
 ------------------
     
+- 1.12.0 -- 2017-11-17
+
+    - add HybridList.setControlContext method  
+    - fix HybridList forgot control implementation 
+    
 - 1.11.1 -- 2017-11-17
 
     - fix HybridList listShapers/listParameters typo 

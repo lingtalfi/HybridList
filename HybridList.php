@@ -37,6 +37,7 @@ class HybridList implements HybridListInterface
      * @var HybridListControlInterface[]
      */
     private $controls;
+    private $controlsContext;
     private static $allowedListInfoOverride = [
         'sliceNumber',
         'sliceLength',
@@ -51,6 +52,7 @@ class HybridList implements HybridListInterface
         $this->listParameters = [];
         $this->listShapers = [];
         $this->controls = [];
+        $this->controlsContext = [];
     }
 
     public static function create()
@@ -68,6 +70,15 @@ class HybridList implements HybridListInterface
             'totalNumberOfItems' => 0,
             'offset' => null,
         ];
+
+
+        //--------------------------------------------
+        // PREPARE ALL CONTROLS NOW
+        //--------------------------------------------
+        $context = $this->controlsContext;
+        foreach ($this->controls as $control) {
+            $control->prepareHybridList($this, $context);
+        }
 
 
         //--------------------------------------------
@@ -233,6 +244,13 @@ class HybridList implements HybridListInterface
     public function removeControl($name)
     {
         unset($this->controls[$name]);
+        return $this;
+    }
+
+
+    public function setControlsContext(array $controlsContext)
+    {
+        $this->controlsContext = $controlsContext;
         return $this;
     }
 
