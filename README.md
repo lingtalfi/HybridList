@@ -208,7 +208,8 @@ array(6) {
 More doc
 ------------
 
-In the **doc/hybrid-list-prototype.md** document.
+- In the **doc/hybrid-list-prototype.md** document
+- In the **doc/hybrid-list-controls.md** document
 
 
 History Log
