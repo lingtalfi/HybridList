@@ -49,7 +49,7 @@ class HybridList implements HybridListInterface
         $this->requestGenerator = null;
         $this->sortKey = "sort";
         $this->listParameters = [];
-        $this->listParameters = [];
+        $this->listShapers = [];
         $this->controls = [];
     }
 
