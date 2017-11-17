@@ -28,6 +28,9 @@ interface HybridListInterface
 
     public function setRequestGenerator(RequestGeneratorInterface $requestGenerator);
 
+
+    public function addControl($name, HybridListControlInterface $control);
+
     /**
      * @return HybridListControlInterface|mixed
      * @throws HybridListException
