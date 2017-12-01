@@ -215,6 +215,10 @@ More doc
 History Log
 ------------------
     
+- 1.13.0 -- 2017-12-01
+
+    - add SqlPaginatorHybridListControl  
+    
 - 1.12.0 -- 2017-11-17
 
     - add HybridList.setControlContext method  

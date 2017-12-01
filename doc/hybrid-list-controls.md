@@ -186,3 +186,50 @@ class ProductSortHybridListControl extends HybridListControl
 
 }
 ```
+
+
+
+
+The SqlPaginatorHybridListControl control
+========================================
+2017-12-01
+
+
+Use this control to react to the page variable and create your pagination system.
+
+
+How to
+-----------
+
+```php
+$userId = 1;
+$pool = [
+    'sort' => "date_asc",
+    'sort' => "amount_asc",
+    'page' => "2",
+];
+$sqlRequest = SqlRequest::create();
+$hybridList = HybridList::create()
+    ->setListParameters($pool)
+    ->setRequestGenerator(SqlRequestGenerator::create()
+        ->setSqlRequest($sqlRequest
+            ->addField("*")
+            ->setTable("ek_order")
+            ->addWhere("and user_id=" . (int)$userId)
+        )
+    );
+
+
+$hybridList->addControl("sort", OrderSortHybridListControl::create());
+$hybridList->addControl("slice", SqlPaginatorHybridListControl::create()->setNumberOfItemsPerPage(1));
+
+$info = $hybridList->execute();
+a($info);
+
+```
+
+
+
+
+
+

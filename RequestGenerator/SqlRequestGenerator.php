@@ -16,11 +16,17 @@ class SqlRequestGenerator extends RequestGenerator
     private $infoArray;
     private $pdoFetchStyle;
 
+    /**
+     * @var null|  fn ( SqlRequestGenerator $generator, $nbItems )
+     */
+    private $onNbItemsReadyCb;
+
     public function __construct()
     {
         parent::__construct();
         $this->sqlRequest = null;
         $this->pdoFetchStyle = null;
+        $this->onNbItemsReadyCb = null;
         $this->infoArray = [];
     }
 
@@ -45,14 +51,19 @@ class SqlRequestGenerator extends RequestGenerator
     public function getItems()
     {
         $this->infoArray = []; // reset?
-        $sqlRequest = $this->sqlRequest->getSqlRequest();
         $countRequest = $this->sqlRequest->getCountSqlRequest();
         $markers = $this->sqlRequest->getMarkers();
 
 
         $row = QuickPdo::fetch($countRequest, $markers);
-        $rows = QuickPdo::fetchAll($sqlRequest, $markers, $this->pdoFetchStyle);
         $nbItems = $row['count'];
+
+
+        $this->onNbItemsReady($nbItems);
+
+
+        $sqlRequest = $this->sqlRequest->getSqlRequest();
+        $rows = QuickPdo::fetchAll($sqlRequest, $markers, $this->pdoFetchStyle);
 
 
         $this->infoArray["totalNumberOfItems"] = $nbItems;
@@ -91,5 +102,23 @@ class SqlRequestGenerator extends RequestGenerator
          * before the returned array makes any sense.
          */
         return $this->infoArray;
+    }
+
+    public function setOnNbItemsReadyCb(callable $onNbItemsReadyCb)
+    {
+        $this->onNbItemsReadyCb = $onNbItemsReadyCb;
+        return $this;
+    }
+
+
+
+    //--------------------------------------------
+    //
+    //--------------------------------------------
+    protected function onNbItemsReady($nbItems)
+    {
+        if (null !== $this->onNbItemsReadyCb) {
+            call_user_func($this->onNbItemsReadyCb, $this, $nbItems);
+        }
     }
 }
