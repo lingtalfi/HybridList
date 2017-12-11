@@ -10,10 +10,12 @@ class RequestGenerator implements RequestGeneratorInterface
 {
 
     protected $requestShapers;
+    protected $items;
 
     public function __construct()
     {
         $this->requestShapers = [];
+        $this->items = [];
     }
 
 
@@ -24,7 +26,13 @@ class RequestGenerator implements RequestGeneratorInterface
 
     public function getItems()
     {
-        return [];
+        return $this->items;
+    }
+
+    public function setItems(array $items)
+    {
+        $this->items = $items;
+        return $this;
     }
 
     public function getRequestShapers()

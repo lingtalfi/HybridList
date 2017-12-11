@@ -215,6 +215,10 @@ More doc
 History Log
 ------------------
     
+- 1.14.0 -- 2017-12-11
+
+    - add RequestGenerator.setItems method  
+    
 - 1.13.0 -- 2017-12-01
 
     - add SqlPaginatorHybridListControl  
