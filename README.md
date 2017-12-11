@@ -215,6 +215,10 @@ More doc
 History Log
 ------------------
     
+- 1.15.0 -- 2017-12-11
+
+    - add ArrayPaginatorHybridListControl  
+    
 - 1.14.0 -- 2017-12-11
 
     - add RequestGenerator.setItems method  

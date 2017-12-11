@@ -108,6 +108,7 @@ class HybridList implements HybridListInterface
         $items = $this->requestGenerator->getItems();
 
 
+
         //--------------------------------------------
         // COLLECT ALL THE INFO THAT WE CAN FROM THE SQL
         //--------------------------------------------
