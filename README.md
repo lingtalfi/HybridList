@@ -215,6 +215,10 @@ More doc
 History Log
 ------------------
     
+- 1.16.0 -- 2017-12-11
+
+    - fix SqlPaginatorHybridListControl problem with nbItems=0  
+    
 - 1.15.0 -- 2017-12-11
 
     - add ArrayPaginatorHybridListControl  

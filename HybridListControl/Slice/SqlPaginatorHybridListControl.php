@@ -94,18 +94,25 @@ class SqlPaginatorHybridListControl extends HybridListControl
                         };
                     }
 
-                    $nipp = $this->nipp; // is the user allowed to override it?
-                    $maxPage = (int)ceil($nbItems / $nipp);
-                    $page = (int)$this->userPage;
-                    if ($page < 1) {
-                        $page = 1;
-                    } elseif ($page > $maxPage) {
-                        $page = $maxPage;
+                    if ($nbItems) {
+
+                        $nipp = $this->nipp; // is the user allowed to override it?
+                        $maxPage = (int)ceil($nbItems / $nipp);
+                        $page = (int)$this->userPage;
+                        if ($page < 1) {
+                            $page = 1;
+                        } elseif ($page > $maxPage) {
+                            $page = $maxPage;
+                        }
+                        $offset = ($page - 1) * $nipp;
+
+
+                        $sqlRequest->setLimit($offset, $nipp);
                     }
-                    $offset = ($page - 1) * $nipp;
-
-
-                    $sqlRequest->setLimit($offset, $nipp);
+                    else{
+                        $maxPage = 1;
+                        $page = 1;
+                    }
 
 
                     //--------------------------------------------
