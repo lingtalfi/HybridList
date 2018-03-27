@@ -215,6 +215,10 @@ More doc
 History Log
 ------------------
     
+- 1.17.1 -- 2018-03-27
+
+    - fix SqlRequest not throwing HybridListException exception  
+    
 - 1.17.0 -- 2018-03-27
 
     - SqlRequest system has been externalized to SqlQuery planet 
