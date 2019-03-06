@@ -1,16 +1,16 @@
 <?php
 
 
-namespace HybridList;
+namespace Ling\HybridList;
 
 
-use HybridList\Exception\HybridListException;
-use HybridList\HybridListControl\HybridListControlInterface;
-use HybridList\ListShaper\ListShaperInterface;
-use HybridList\RequestGenerator\RequestGeneratorInterface;
-use HybridList\RequestGenerator\SqlRequestGenerator;
-use HybridList\RequestShaper\RequestShaperInterface;
-use HybridList\Shaper\ShaperInterface;
+use Ling\HybridList\Exception\HybridListException;
+use Ling\HybridList\HybridListControl\HybridListControlInterface;
+use Ling\HybridList\ListShaper\ListShaperInterface;
+use Ling\HybridList\RequestGenerator\RequestGeneratorInterface;
+use Ling\HybridList\RequestGenerator\SqlRequestGenerator;
+use Ling\HybridList\RequestShaper\RequestShaperInterface;
+use Ling\HybridList\Shaper\ShaperInterface;
 
 
 /**

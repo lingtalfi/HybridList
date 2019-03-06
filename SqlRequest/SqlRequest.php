@@ -1,11 +1,11 @@
 <?php
 
 
-namespace HybridList\SqlRequest;
+namespace Ling\HybridList\SqlRequest;
 
 
-use HybridList\Exception\HybridListException;
-use SqlQuery\SqlQuery;
+use Ling\HybridList\Exception\HybridListException;
+use Ling\SqlQuery\SqlQuery;
 
 class SqlRequest extends SqlQuery implements SqlRequestInterface
 {

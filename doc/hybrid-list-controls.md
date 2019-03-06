@@ -55,9 +55,9 @@ Example of a sort control
 namespace Module\Ekom\HybridList\HybridListControl\Sort;
 
 
-use HybridList\HybridListControl\HybridListControl;
-use HybridList\HybridListInterface;
-use HybridList\ListShaper\ListShaper;
+use Ling\HybridList\HybridListControl\HybridListControl;
+use Ling\HybridList\HybridListInterface;
+use Ling\HybridList\ListShaper\ListShaper;
 
 
 /**

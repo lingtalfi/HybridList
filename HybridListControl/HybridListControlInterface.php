@@ -1,9 +1,9 @@
 <?php
 
 
-namespace HybridList\HybridListControl;
+namespace Ling\HybridList\HybridListControl;
 
-use HybridList\HybridListInterface;
+use Ling\HybridList\HybridListInterface;
 
 
 /**

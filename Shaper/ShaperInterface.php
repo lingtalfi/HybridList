@@ -1,7 +1,7 @@
 <?php
 
 
-namespace HybridList\Shaper;
+namespace Ling\HybridList\Shaper;
 
 
 interface ShaperInterface{

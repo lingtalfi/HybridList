@@ -1,10 +1,10 @@
 <?php
 
 
-namespace HybridList\Shaper;
+namespace Ling\HybridList\Shaper;
 
 
-use HybridList\Exception\HybridListException;
+use Ling\HybridList\Exception\HybridListException;
 
 class Shaper implements ShaperInterface
 {

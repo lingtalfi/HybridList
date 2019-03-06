@@ -14,7 +14,7 @@ Install
 ==========
 Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 ```bash
-uni import HybridList
+uni import Ling/HybridList
 ```
 
 Or just download it and place it where you want otherwise.
@@ -41,12 +41,12 @@ Example in a [kamille](https://github.com/lingtalfi/kamille) app.
 
 
 use Core\Services\A;
-use HybridList\HybridList;
-use HybridList\ListShaper\ListShaper;
-use HybridList\RequestGenerator\SqlRequestGenerator;
-use HybridList\RequestShaper\RequestShaper;
-use HybridList\SqlRequest\SqlRequest;
-use HybridList\SqlRequest\SqlRequestInterface;
+use Ling\HybridList\HybridList;
+use Ling\HybridList\ListShaper\ListShaper;
+use Ling\HybridList\RequestGenerator\SqlRequestGenerator;
+use Ling\HybridList\RequestShaper\RequestShaper;
+use Ling\HybridList\SqlRequest\SqlRequest;
+use Ling\HybridList\SqlRequest\SqlRequestInterface;
 use Module\Ekom\Api\EkomApi;
 
 

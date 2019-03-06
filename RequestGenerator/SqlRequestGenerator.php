@@ -1,11 +1,11 @@
 <?php
 
 
-namespace HybridList\RequestGenerator;
+namespace Ling\HybridList\RequestGenerator;
 
 
-use HybridList\SqlRequest\SqlRequestInterface;
-use QuickPdo\QuickPdo;
+use Ling\HybridList\SqlRequest\SqlRequestInterface;
+use Ling\QuickPdo\QuickPdo;
 
 class SqlRequestGenerator extends RequestGenerator
 {

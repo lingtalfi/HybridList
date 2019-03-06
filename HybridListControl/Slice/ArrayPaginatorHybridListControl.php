@@ -1,18 +1,18 @@
 <?php
 
 
-namespace HybridList\HybridListControl\Slice;
+namespace Ling\HybridList\HybridListControl\Slice;
 
 
-use Bat\UriTool;
-use HybridList\Exception\HybridListException;
-use HybridList\HybridListControl\HybridListControl;
-use HybridList\HybridListInterface;
-use HybridList\ListShaper\ListShaper;
-use HybridList\RequestGenerator\RequestGenerator;
-use HybridList\RequestGenerator\SqlRequestGenerator;
-use HybridList\RequestShaper\RequestShaper;
-use HybridList\SqlRequest\SqlRequestInterface;
+use Ling\Bat\UriTool;
+use Ling\HybridList\Exception\HybridListException;
+use Ling\HybridList\HybridListControl\HybridListControl;
+use Ling\HybridList\HybridListInterface;
+use Ling\HybridList\ListShaper\ListShaper;
+use Ling\HybridList\RequestGenerator\RequestGenerator;
+use Ling\HybridList\RequestGenerator\SqlRequestGenerator;
+use Ling\HybridList\RequestShaper\RequestShaper;
+use Ling\HybridList\SqlRequest\SqlRequestInterface;
 
 
 /**

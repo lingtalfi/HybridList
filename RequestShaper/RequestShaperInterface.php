@@ -1,11 +1,11 @@
 <?php
 
 
-namespace HybridList\RequestShaper;
+namespace Ling\HybridList\RequestShaper;
 
 
-use HybridList\Shaper\ShaperInterface;
-use HybridList\SqlRequest\SqlRequestInterface;
+use Ling\HybridList\Shaper\ShaperInterface;
+use Ling\HybridList\SqlRequest\SqlRequestInterface;
 
 interface RequestShaperInterface extends ShaperInterface
 {

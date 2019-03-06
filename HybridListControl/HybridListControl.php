@@ -1,7 +1,7 @@
 <?php
 
 
-namespace HybridList\HybridListControl;
+namespace Ling\HybridList\HybridListControl;
 
 
 abstract class HybridListControl implements HybridListControlInterface

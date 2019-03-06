@@ -1,10 +1,10 @@
 <?php
 
 
-namespace HybridList\SqlRequest;
+namespace Ling\HybridList\SqlRequest;
 
 
-use SqlQuery\SqlQueryInterface;
+use Ling\SqlQuery\SqlQueryInterface;
 
 interface SqlRequestInterface extends SqlQueryInterface
 {

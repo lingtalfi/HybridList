@@ -1,7 +1,7 @@
 <?php
 
 
-namespace HybridList\Exception;
+namespace Ling\HybridList\Exception;
 
 
 class HybridListException extends \Exception

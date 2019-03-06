@@ -1,10 +1,10 @@
 <?php
 
 
-namespace HybridList\RequestGenerator;
+namespace Ling\HybridList\RequestGenerator;
 
 
-use HybridList\RequestShaper\RequestShaperInterface;
+use Ling\HybridList\RequestShaper\RequestShaperInterface;
 
 interface RequestGeneratorInterface
 {

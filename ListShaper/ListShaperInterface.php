@@ -1,10 +1,10 @@
 <?php
 
 
-namespace HybridList\ListShaper;
+namespace Ling\HybridList\ListShaper;
 
 
-use HybridList\Shaper\ShaperInterface;
+use Ling\HybridList\Shaper\ShaperInterface;
 
 interface ListShaperInterface extends ShaperInterface
 {
