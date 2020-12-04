@@ -214,7 +214,11 @@ More doc
 
 History Log
 ------------------
-    
+
+- 1.17.2 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.17.1 -- 2018-03-27
 
     - fix SqlRequest not throwing HybridListException exception  
